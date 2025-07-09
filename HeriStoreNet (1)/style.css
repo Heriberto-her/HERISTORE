@@ -1,0 +1,239 @@
+:root {
+  --azul-marino: #002147;
+  --beige: #f5f5dc;
+  --blanco: #ffffff;
+  --gris-suave: #eeeeee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--beige);
+  color: var(--azul-marino);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--azul-marino);
+  color: var(--blanco);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(to right, var(--azul-marino), #00152d);
+  color: var(--blanco);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--beige);
+  color: var(--azul-marino);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.productos, .ciber, .contacto {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.producto {
+  background-color: var(--blanco);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.btn-wsp {
+  background-color: #25d366;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+footer {
+  background-color: var(--azul-marino);
+  color: var(--blanco);
+  text-align: center;
+  padding: 1rem;
+}
+
+.redes a img {
+  width: 30px;
+  margin: 0 0.5rem;
+}
+.producto-item {
+  border: 1px solid var(--gris-suave);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.producto-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+}
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow:auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-contenido {
+  background-color: var(--blanco);
+  margin: 10% auto;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#carrito-items > div {
+  border-bottom: 1px solid var(--gris-suave);
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.producto-carrito {
+  border: 1px solid var(--gris-suave);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.producto-carrito input[type="number"] {
+  width: 60px;
+  margin-left: 0.5rem;
+}
+
+.producto-carrito button {
+  margin-left: 1rem;
+  background-color: #cc3333;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.producto-carrito button:hover {
+  background-color: #aa0000;
+}
+
+button#vaciar-carrito, button#finalizar-compra {
+  padding: 0.7rem 1.5rem;
+  margin-right: 1rem;
+  background-color: var(--azul-marino);
+  color: var(--blanco);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button#vaciar-carrito:hover, button#finalizar-compra:hover {
+  background-color: #00122a;
+}
+#formulario-compra input, #formulario-compra textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#formulario-compra button {
+  margin-right: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: var(--azul-marino);
+  color: var(--blanco);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#formulario-compra button:hover {
+  background-color: #00122a;
+}
+
+#resumen-pedido {
+  background-color: var(--beige);
+  border: 1px solid var(--azul-marino);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+#resumen-pedido button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #004080;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
