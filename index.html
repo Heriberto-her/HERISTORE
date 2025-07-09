@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heri Store Net</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Heri Store Net</div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#ciber">Ciber</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <h1>Bienvenido a Heri Store Net</h1>
+    <p>Tu tienda de confianza en papelería, focos y ciberservicios.</p>
+    <a href="#productos" class="btn">Ver Productos</a>
+  </section>
+
+  <section id="productos" class="productos">
+    <h2>Productos Destacados</h2>
+
+    <!-- Buscador -->
+    <input type="text" id="buscador" placeholder="Buscar productos..." style="margin: 1rem auto; display: block; width: 90%; max-width: 400px; padding: 0.5rem; font-size: 16px;" />
+
+    <div class="grid">
+      <div class="producto producto-item">
+        <img src="img/papel.png" alt="Papelería" />
+        <h3>PAPELERIA</h3>
+        <p>Todo lo que necesitas para la escuela u oficina.</p>
+        <a href="papeleria.html" class="btn">Ver Papelería</a>
+      </div>
+      <div class="producto producto-item">
+        <img src="img/foco.png" alt="Focos" />
+        <h3>FOCOS Y BOCINAS</h3>
+        <p>Variedad en iluminación para tu hogar o negocio.</p>
+        <a href="focos.html" class="btn">Ver Focos</a>
+      </div>
+      <div class="producto producto-item">
+        <img src="img/ciber.jpg" alt="Ciber" />
+        <h3>Próximamente: Ciber</h3>
+        <p>Reserva tu lugar para navegar, imprimir y más.</p>
+        <a href="ciber.html" class="btn">Ver Ciber</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="ciber" class="ciber">
+    <h2>Reservas para el Ciber</h2>
+    <p>Muy pronto podrás apartar tu computadora desde aquí.</p>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <h2>Contáctanos</h2>
+    <p>Visítanos o mándanos un mensaje por WhatsApp.</p>
+    <a href="https://wa.me/529617164210" target="_blank" class="btn-wsp">Enviar WhatsApp</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Heri Store Net | Síguenos:</p>
+    
+    
+    </div>
+  </footer>
+
+  <!-- Script del buscador -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const buscador = document.getElementById('buscador');
+      const productos = document.querySelectorAll('.producto-item');
+
+      buscador.addEventListener('input', () => {
+        const valor = buscador.value.toLowerCase();
+        productos.forEach(p => {
+          const texto = p.textContent.toLowerCase();
+          p.style.display = texto.includes(valor) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
